@@ -1,10 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="cur.meia.gpx_pv.controllers.AdminController"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@styles/main-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cur.meia.gpx_pv.controllers.AdminController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
+         <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="white-background-pattern" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="welcomeText" styleClass="header-label">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </top>
+                     <center>
+                        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                          <tabs>
+                            <Tab text="Top 10 Ventas">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="ventasTable" layoutX="40.8" layoutY="49.0" prefHeight="210.0" prefWidth="399.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="30.0">
+                                            <columns>
+                                              <TableColumn fx:id="vNumC" prefWidth="44.00006103515625" text="#" />
+                                              <TableColumn fx:id="nitC" prefWidth="138.4000244140625" text="NIT" />
+                                                <TableColumn fx:id="fechaC" prefWidth="98.4000244140625" text="FECHA" />
+                                                <TableColumn fx:id="vTotalC" prefWidth="76.0" text="TOTAL" />
+                                                <TableColumn fx:id="empleadoC" prefWidth="160.0" text="EMPLEADO" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Top 2 Sucursales">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="sucursalesTable" prefHeight="210.0" prefWidth="402.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="30.0">
+                                             <columns>
+                                                <TableColumn fx:id="sNumC" prefWidth="52.0" text="ID" />
+                                                <TableColumn fx:id="sucursalC" prefWidth="164.79998779296875" text="SUCURSAL" />
+                                                <TableColumn fx:id="sVentasC" prefWidth="62.4000244140625" text="VENTAS" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="Top Productos">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="productosTable" prefHeight="210.0" prefWidth="402.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="30.0">
+                                             <columns>
+                                                <TableColumn fx:id="pNumC" prefWidth="52.0" text="ID" />
+                                                <TableColumn fx:id="productoC" prefWidth="164.79998779296875" text="PRODUCTO" />
+                                                <TableColumn fx:id="cantC" prefWidth="62.4000244140625" text="#" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab text="Top Clientes">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </center>
+                     <bottom>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button onAction="#handleCerrarSesion" text="Cerrar Sesión">
+                                 <styleClass>
+                                    <String fx:value="black-button" />
+                                    <String fx:value="black-button-pink" />
+                                 </styleClass>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </bottom>
+                  </BorderPane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

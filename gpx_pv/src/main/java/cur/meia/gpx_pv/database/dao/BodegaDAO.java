@@ -87,4 +87,8 @@ public class BodegaDAO {
         }
         return productList;
     }
+
+    public void ingresarEstanteria(int producto, int cantidad, int sucursal) {
+        
+    }
 }

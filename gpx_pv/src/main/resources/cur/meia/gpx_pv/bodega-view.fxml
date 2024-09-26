@@ -70,6 +70,7 @@
                               </styleClass>
                            </Button>
                         </HBox>
+                        <ComboBox fx:id="productosDisponibles1" layoutX="10.0" layoutY="27.0" prefHeight="25.0" prefWidth="240.0" />
                      </VBox>
                   </AnchorPane>
                   <Label fx:id="nombreProducto" alignment="CENTER" prefHeight="34.0" prefWidth="275.0" style="-fx-text-alignment: center;" styleClass="text-field-tags" textAlignment="CENTER" />

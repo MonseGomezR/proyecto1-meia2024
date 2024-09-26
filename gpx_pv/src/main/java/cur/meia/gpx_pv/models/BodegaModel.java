@@ -40,4 +40,8 @@ public class BodegaModel {
     public void ingresarDetalle(int producto, int cantidad, int bodega) throws SQLException {
         bodegaDAO.ingresarProductos(producto, cantidad, bodega);
     }
+
+    public void ingresarEstanteria(int producto, int cantidad, int sucursal) {
+        bodegaDAO.ingresarEstanteria(producto, cantidad, sucursal);
+    }
 }

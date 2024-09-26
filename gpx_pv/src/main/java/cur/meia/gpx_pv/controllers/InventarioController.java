@@ -81,9 +81,6 @@ public class InventarioController {
             nombreProducto.setText("Productos ingresados exitosamente.");
             refreshTable();
             cancelar();
-        } catch (SQLException e) {
-            nombreProducto.setText("Error al ingresar productos.");
-            throw new RuntimeException(e);
         } finally {
             Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(5), event2 -> nombreProducto.setText("")));
             timeline.setCycleCount(1);

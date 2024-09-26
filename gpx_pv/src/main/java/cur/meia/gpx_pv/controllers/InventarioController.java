@@ -148,4 +148,11 @@ public class InventarioController {
 
         }
     }
+
+    @FXML
+    public void agregarProducto() {
+        colocarProductoButton.setDisable(true);
+        panel.setDisable(false);
+        cancelarButton.setDisable(false);
+    }
 }

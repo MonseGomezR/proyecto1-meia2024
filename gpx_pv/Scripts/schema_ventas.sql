@@ -1,0 +1,2 @@
+CREATE SCHEMA IF NOT EXISTS ventas
+    AUTHORIZATION postgres;

@@ -1,0 +1,2 @@
+CREATE SCHEMA IF NOT EXISTS administracion
+    AUTHORIZATION postgres;

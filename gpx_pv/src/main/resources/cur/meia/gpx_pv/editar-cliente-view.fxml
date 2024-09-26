@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="477.0" prefWidth="1000.0" stylesheets="@styles/login-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cur.meia.gpx_pv.controllers.EditarClienteController">
+    <stylesheets>
+        <URL value="@styles/main-style.css" />
+    </stylesheets>
+    <TableView fx:id="clientsTable" layoutX="44.0" layoutY="49.0" prefHeight="382.0" prefWidth="940.0" AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <columns>
+          <TableColumn fx:id="numC" maxWidth="70.0" prefWidth="29.0" style="-fx-alignment: center;" text="#" />
+          <TableColumn fx:id="nameC" maxWidth="314.0" prefWidth="220.0" style="-fx-alignment: center;" text="NOMBRE" />
+          <TableColumn fx:id="nitC" maxWidth="480.0" prefWidth="200.0" style="-fx-alignment: center;" text="NIT" />
+          <TableColumn fx:id="buysC" maxWidth="336.0" prefWidth="106.0" style="-fx-alignment: center;" text="COMPRAS" />
+          <TableColumn fx:id="tarjetaC" maxWidth="403.0" prefWidth="184.0" style="-fx-alignment: center;" text="TARJETA N." />
+          <TableColumn fx:id="rangoC" maxWidth="262.0" prefWidth="86.0" style="-fx-alignment: center;" text="RANGO" />
+          <TableColumn fx:id="gastosC" maxWidth="431.0" prefWidth="114.0" style="-fx-alignment: center;" text="GASTOS" />
+        </columns>
+    </TableView>
+    <Button fx:id="regresarButton" layoutX="50.0" layoutY="446.0" mnemonicParsing="false" onAction="#volver" prefHeight="43.0" prefWidth="160.0" text="Cerrar" AnchorPane.bottomAnchor="25.0">
+      <styleClass>
+         <String fx:value="black-button" />
+         <String fx:value="black-button-pink" />
+      </styleClass></Button>
+    <Button fx:id="no" disable="true" layoutX="231.0" layoutY="446.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="122.0" styleClass="main-button" text="Editar..." AnchorPane.bottomAnchor="25.0" />
+</AnchorPane>

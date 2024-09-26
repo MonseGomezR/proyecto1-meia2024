@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import java.net.URL?>
+<StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cur.meia.gpx_pv.controllers.InicioController">
+  <stylesheets>
+    <URL value="@styles/main-style.css"/>
+    <URL value="@styles/hello-style.css"/>
+  </stylesheets>
+  <AnchorPane style="-fx-background-color: black;">
+
+    <StackPane styleClass="white-background-pattern" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="10">
+
+      <!-- Contenedor para el texto y botón -->
+      <VBox alignment="center" spacing="20">
+
+        <!-- Texto de Bienvenida -->
+        <Label styleClass="welcome-text" text="Bienvenido - GamerPro Xela" />
+
+        <!-- Botón de Iniciar Sesión -->
+        <Button fx:id="btn" styleClass="login-button" text="Iniciar Sesion" onAction="#onHelloButtonClick">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+
+      </VBox>
+
+      <!-- Texto inferior (marca o derechos) -->
+      <Label style="-fx-padding: 10;" styleClass="footer-text" text="GamerPro Xela ©2024" StackPane.alignment="BOTTOM_LEFT" />
+    </StackPane>
+
+  </AnchorPane>
+
+</StackPane>

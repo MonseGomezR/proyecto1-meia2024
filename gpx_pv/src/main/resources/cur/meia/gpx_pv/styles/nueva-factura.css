@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.root {
+    -fx-font-family: 'Outfit', sans-serif;
+}
+
+.white-background {
+    -fx-background-color: rgba(255,255,255,0.8);
+    -fx-padding: 10;
+    -fx-background-radius: 25;
+}
+
+.text-field-tags{
+    -fx-font-weight: 700;
+    -fx-font-size: 12;
+}
+
+.text-field {
+    -fx-background-radius: 15;
+    -fx-background-color: #D9D9D9;
+    -fx-font-size: 12;
+}
+
+.mini-text {
+    -fx-font-size: 10;
+    -fx-font-weight: 500;
+    -fx-text-alignment: center;
+}
+
+.rb {
+    -fx-font-size: 12;
+}
+
+.rb .radio{
+    -fx-mark-color: #5E239D;
+    -fx-border-color: #5E239D;
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%;
+    -fx-border-width: 3;
+}
+
+.addClient-button {
+    -fx-font-size: 10px;
+    -fx-background-color: black;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-padding: 8 20;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-cursor: hand;
+}
+
+.cancelar-button {
+    -fx-font-size: 10px;
+    -fx-background-color: black;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-padding: 8 20;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-cursor: hand;
+}
+
+.finalizar-button {
+    -fx-font-size: 10px;
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-text-fill: black;
+    -fx-font-weight: 700;
+    -fx-padding: 8 20;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-cursor: hand;
+}
+
+.cancelar-button:hover {
+    -fx-background-color: #F61067;
+    -fx-border-color: #F61067;
+}
+
+.addClient-button:hover {
+    -fx-background-color: #5E239D;
+    -fx-border-color: #5E239D;
+}
+
+.finalizar-button:hover {
+    -fx-background-color: white;
+    -fx-border-color: linear-gradient(to right, #F61067, #5E239D, #00F0B5);
+    -fx-text-fill: linear-gradient(to right, #F61067, #5E239D, #00F0B5);
+}
+
+

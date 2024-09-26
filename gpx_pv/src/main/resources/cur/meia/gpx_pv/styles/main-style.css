@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.root {
+    -fx-font-family: 'Outfit', sans-serif;
+}
+
+.white-background-pattern {
+    -fx-background-color: #D9D9D9;
+    -fx-background-image: url("../images/Patron.png");
+    -fx-background-size: 35%;
+    -fx-background-repeat: repeat;
+    -fx-background-position: center;
+}
+
+.white-background {
+    -fx-background-color: rgba(255,255,255,0.8);
+    -fx-padding: 10;
+    -fx-background-radius: 25;
+}
+
+.black-background-pattern {
+    -fx-background-color: black;
+    -fx-background-image: url("../images/Patron.png");
+    -fx-background-size: 35%;
+    -fx-background-repeat: repeat;
+    -fx-background-position: center;
+}
+
+.black-button {
+    -fx-font-size: 13px;
+    -fx-background-color: black;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-padding: 8 20;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-cursor: hand;
+}
+
+.black-button-pink:hover {
+    -fx-background-color: #F61067;
+    -fx-border-color: #F61067;
+}
+
+.black-button-purple:hover {
+    -fx-background-color: #5E239D;
+    -fx-border-color: #5E239D;
+}
+
+.main-button {
+    -fx-font-size: 13px;
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-text-fill: black;
+    -fx-font-weight: 700;
+    -fx-padding: 10 20;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-transition: all 0.7s ease;
+    -fx-cursor: hand;
+}
+
+.main-button:hover {
+    -fx-background-color: white;
+    -fx-border-color: linear-gradient(to right, #F61067, #5E239D, #00F0B5);
+    -fx-text-fill: linear-gradient(to right, #F61067, #5E239D, #00F0B5);
+}
+
+.footer-text {
+    -fx-font-size: 10px;
+    -fx-text-fill: black;
+}
+
+.text-field {
+    -fx-background-radius: 15;
+    -fx-background-color: #D9D9D9;
+    -fx-font-size: 12;
+}
+
+.text-field-tags{
+    -fx-font-weight: 700;
+    -fx-font-size: 12;
+}
+
+.header-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-margin: 0 100 0 10;
+    -fx-padding: 10 20;
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-background-radius: 20;
+}
+
+.table-view {
+    -fx-background-color:#5E239D;
+    -fx-background-radius:15;
+}
+.table-view .column-header-background{
+    -fx-background-color: #5E239D;
+    -fx-background-radius:14;
+    -fx-background-insets: 0 0 10 0;
+}
+
+.table-view .column-header {
+    -fx-pref-height: 50;
+}
+
+.table-view . {
+    -fx-pref-height: 50;
+}
+
+.table-view .column-header, .table-view .filler{
+    -fx-size:50px;
+    -fx-border-width: 0 0 10 0;
+    -fx-background-color:transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white ;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: #00C389;
+    -fx-border-width: 1px;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-margin:5;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: black;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-margin:5;
+    -fx-text-fill: black;
+}
+
+.table-view .table-cell {
+    -fx-alignment: CENTER;
+    -fx-border-color: transparent;
+}
+
+
+.table-view .table-row-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}

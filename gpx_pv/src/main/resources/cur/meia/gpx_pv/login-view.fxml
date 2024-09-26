@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import java.net.URL?>
+<StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cur.meia.gpx_pv.controllers.LoginController">
+    <stylesheets>
+        <URL value="@styles/main-style.css"/>
+        <URL value="@styles/login-style.css"/>
+    </stylesheets>
+    <AnchorPane style="-fx-background-color: #D9D9D9;">
+        <StackPane styleClass="black-background-pattern" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="10">
+            <VBox alignment="center" spacing="15">
+                <Label styleClass="is-text" text="Iniciar Sesion" />
+                <Label maxHeight="30.0" prefHeight="30.0" styleClass="normal-text" text="Username" />
+                <TextField fx:id="userField" styleClass="form-login">
+                   <VBox.margin>
+                      <Insets bottom="10.0" top="-10.0" />
+                   </VBox.margin>
+                   <padding>
+                      <Insets left="15.0" right="10.0" />
+                   </padding>
+                   <opaqueInsets>
+                      <Insets />
+                   </opaqueInsets></TextField>
+                <Label maxHeight="30.0" prefHeight="20.0" styleClass="normal-text" text="Password" />
+                <PasswordField fx:id="passwordField" styleClass="form-login">
+                   <VBox.margin>
+                      <Insets bottom="10.0" top="-10.0" />
+                   </VBox.margin>
+                   <opaqueInsets>
+                      <Insets />
+                   </opaqueInsets>
+                   <padding>
+                      <Insets left="15.0" />
+                   </padding></PasswordField>
+                <Button defaultButton="true" onAction="#handleLogin" styleClass="login-button" text="Ingresar"/>
+                <Label fx:id="errorMessage" textFill="#F61067" />
+            </VBox>
+            <Label style="-fx-padding: 10;" styleClass="footer-text" text="GamerPro Xela ©2024" StackPane.alignment="BOTTOM_LEFT" />
+        </StackPane>
+    </AnchorPane>
+</StackPane>

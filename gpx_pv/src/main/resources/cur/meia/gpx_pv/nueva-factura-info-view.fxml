@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="470.0" stylesheets="@styles/nueva-factura.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cur.meia.gpx_pv.controllers.NFController">
+   <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="460.0" prefWidth="300.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <VBox alignment="CENTER" fillWidth="false" maxHeight="420.0" maxWidth="410.0" prefHeight="198.0" prefWidth="300.0" styleClass="white-background">
+         <Label prefWidth="280.0" styleClass="text-field-tags" text="NIT:" />
+         <TextField fx:id="nitField" prefHeight="25.0" prefWidth="280.0" promptText="12345678" styleClass="text-field">
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </TextField>
+         <Label prefHeight="18.0" prefWidth="280.0" styleClass="text-field-tags" text="Nombre:" />
+         <TextField fx:id="nameField" editable="false" maxHeight="30.0" maxWidth="280.0" prefHeight="30.0" prefWidth="280.0" promptText="Esperando Cliente..." styleClass="text-field" />
+         <Label fx:id="tipoTarjeta" alignment="CENTER_RIGHT" prefWidth="280.0" styleClass="mini-text" text=".">
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </Label>
+         <Button fx:id="addCliente" alignment="CENTER" contentDisplay="CENTER" disable="true" maxHeight="37.0" mnemonicParsing="false" onAction="#handleNewClient" prefHeight="22.0" prefWidth="250.0" styleClass="addClient-button" text="Agregar Cliente">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </Button>
+         <Label fx:id="addClientMsg" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="12.0" prefWidth="280.0" style="-fx-alignment: center;" styleClass="mini-text">
+            <VBox.margin>
+               <Insets bottom="5.0" />
+            </VBox.margin>
+         </Label>
+         <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="292.0" spacing="10.0">
+            <RadioButton fx:id="rbCF" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="26.0" prefWidth="56.0" styleClass="rb" text="C/F" AnchorPane.leftAnchor="0.0" />
+            <RadioButton fx:id="rbCanjearPuntos" maxWidth="1.7976931348623157E308" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="26.0" styleClass="rb" text="¿Desea canjear sus puntos?" AnchorPane.rightAnchor="0.0" />
+         </HBox>
+         <Label fx:id="puntosDisponibles" alignment="CENTER_RIGHT" prefWidth="280.0" styleClass="mini-text" text="." />
+      </VBox>
+      <SplitPane dividerPositions="0.5" maxHeight="150.0" prefHeight="116.0" prefWidth="300.0" styleClass="white-background">
+         <AnchorPane maxHeight="150.0" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="137.0">
+            <VBox prefHeight="150.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <Label prefHeight="27.0" prefWidth="104.0" styleClass="text-field-tags" text="Sub-Total:" />
+               <Label prefHeight="27.0" prefWidth="104.0" styleClass="text-field-tags" text="Descuento:" />
+               <Label prefHeight="27.0" prefWidth="104.0" styleClass="text-field-tags" text="Puntos:" />
+               <Region prefHeight="20.0" prefWidth="280.0" />
+               <Label prefHeight="27.0" prefWidth="104.0" styleClass="text-field-tags" text="Total:" />
+               <Region prefHeight="30.0" prefWidth="100.0" />
+            </VBox>
+         </AnchorPane>
+         <AnchorPane maxHeight="150.0" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="137.0">
+            <VBox prefHeight="148.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <Label fx:id="subtotalLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="27.0" prefWidth="137.0" styleClass="text-field-tags" text="Q. 0.00" />
+               <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="27.0" prefWidth="137.0" styleClass="text-field-tags" />
+               <Label fx:id="puntosLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="27.0" prefWidth="137.0" styleClass="text-field-tags" />
+               <Region prefHeight="20.0" prefWidth="280.0" />
+               <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="27.0" prefWidth="137.0" styleClass="text-field-tags" />
+               <Label alignment="CENTER_RIGHT" prefWidth="280.0" styleClass="mini-text" text="Puntos ganados: 30" />
+            </VBox>
+         </AnchorPane>
+      </SplitPane>
+      <Region prefHeight="45.0" prefWidth="300.0" />
+      <Label fx:id="compraLabel" alignment="CENTER" prefHeight="17.0" prefWidth="318.0" styleClass="text-field-tags" />
+      <Button fx:id="cancelarVentaButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="30.0" mnemonicParsing="false" onAction="#cerrarVistas" prefHeight="30.0" prefWidth="250.0" styleClass="cancelar-button" text="Cancelar Venta" />
+      <Button fx:id="finalizarButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="30.0" mnemonicParsing="false" onAction="#finalizar" prefHeight="41.0" prefWidth="250.0" styleClass="finalizar-button" text="Finalizar" />
+   </VBox>
+</AnchorPane>
